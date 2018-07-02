@@ -15,6 +15,7 @@
 const ACCESS_TOKEN = '1407651166934bd8aecc0defe98d7b7c';
 const recognition = new webkitSpeechRecognition() || new SpeechRecognition(); // eslint-disable-line
 const synthesis = window.speechSynthesis;
+const socket = new WebSocket('ws://localhost:8085');
 export default {
   name: 'Frankie',
   data() {
@@ -49,6 +50,10 @@ export default {
           }
           this.speak(reply);
         });
+      }
+      // Websocket
+      socket.onmessage = event => {
+        console.log(event.data);
       }
       // Speech synthesis
       this.languages = synthesis.getVoices();
