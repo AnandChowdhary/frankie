@@ -33,7 +33,7 @@ export default {
       }
     },
     status() {
-      serial.send(status);
+      socket.send(status);
     }
   },
   mounted() {
