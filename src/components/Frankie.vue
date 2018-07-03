@@ -33,10 +33,10 @@ export default {
       }
     }
   },
+  mounted() {
+    this.init();
+  },
   methods: {
-    mounted() {
-      this.init();
-    },
     init() {
       // Speech recognition
 			recognition.onresult = event => {
@@ -48,18 +48,23 @@ export default {
 					} catch (e) {
 						reply = "I don't know what to say...";
           }
-          this.speak(reply);
-        });
+          this.speak(reply).then(() => {
+            this.startSpeechRecognition();
+          });
+        }).catch(() => {});
       }
       // Websocket
       socket.onmessage = event => {
-        console.log(event.data);
+        if (event.data.includes('yes')) {
+          if (this.status < 2) {
+            this.startSpeechRecognition();
+          }
+        }
       }
       // Speech synthesis
       this.languages = synthesis.getVoices();
       // Start program
       this.status = 1;
-      // this.startSpeechRecognition();
     },
     startSpeechRecognition() {
       recognition.start();
