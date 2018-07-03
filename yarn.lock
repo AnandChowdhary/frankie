@@ -1124,6 +1124,10 @@ alphanum-sort@^1.0.1, alphanum-sort@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/alphanum-sort/-/alphanum-sort-1.0.2.tgz#97a1119649b211ad33691d9f9f486a8ec9fbe0a3"
 
+always@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/always/-/always-2.2.0.tgz#2886168d4f657fa5c1e9f723a6d93c4d75110d41"
+
 ansi-bgblack@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/ansi-bgblack/-/ansi-bgblack-0.1.1.tgz#a68ba5007887701b6aafbe3fa0dadfdfa8ee3ca2"

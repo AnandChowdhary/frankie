@@ -31,6 +31,9 @@ export default {
       if (!this.selectedVoice) {
         this.selectedVoice = this.languages[0];
       }
+    },
+    status() {
+      serial.send(status);
     }
   },
   mounted() {

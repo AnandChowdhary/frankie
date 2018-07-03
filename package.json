@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "serial": "always serial.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.0",
@@ -19,6 +20,7 @@
     "@vue/cli-plugin-babel": "^3.0.0-rc.3",
     "@vue/cli-plugin-eslint": "^3.0.0-rc.3",
     "@vue/cli-service": "^3.0.0-rc.3",
+    "always": "^2.2.0",
     "vue-template-compiler": "^2.5.16"
   },
   "eslintConfig": {
